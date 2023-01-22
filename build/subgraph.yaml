@@ -1,0 +1,21 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: arweave
+    name: Contract
+    network: arweave-mainnet
+    source:
+      owner: 017X3zIB9hxEmh3ZYAqjrzonoAdeiHtCnHhqYXHuVtqyl0G6FSeECjJ6Jb0MZNbSIKZcCek19jiyEuJgmwIeHVYqfU3wJOBooxRy4_cCqsRH_NwSv0JdBjbtLiS4m2YgiHhh-hZ2tYZ9s2Dx3bLuTpgzgVyqXfVfcQVtBAysMUvEjfHDM0zYq-nTMVi0nk6YfY7gDUC1uoU54Endftqrm73lpb2fWc-3G1Rw55kpGYXLA2WIpBxHIsaqd13rTcVdJtrYDVw6XMpcl_mEZMSqVoGRFEICkAutRo5l93iYab4g8Ms3NZGo_FoURhlyUhMFK8iqn3Opc7BSSbnX4PJasGGSl3fojmOTX9vz64Q9VLyb_BDd9_iJa6EMw_lgM0LyY-xhEoDVn5vr892TrtVGleX85zRfAPZmFlKYQsadrsftGNYYkYIs8WC8_DBR0DGb0CiGWluYYfQtuGocGNnW6q9CyQ1dk16lfqb0TQxleKRsbvXypJD0XQAPhpqrt8AB5pfp1Mfa19y4um5YKSRHBlHg4EalEp5X6M9HKrvQUTfDmDq-6m89FpTCKGb0M0cA2mOO8UOym-4iCH9pEEFhmsOv9HeE2yeSLqtGmAXShaTDb5dIYUJ8IJUvFcU2fJXkoONYIIUs_p4HB6oL932WHfBqhz987E_g7xmt_RCWGDU
+      startBlock: 1090000
+    mapping:
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Block
+        - Transaction
+      blockHandlers:
+        - handler: handleBlock
+      transactionHandlers:
+        - handler: handleTx
+      file: Contract\Contract.wasm
